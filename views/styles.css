@@ -1,0 +1,57 @@
+.north {
+  width : 650px; height: 30px;
+  margin : 20px;
+  background: rgb(236, 236, 226);
+}
+
+.north-content {
+  position: absolute;
+  left:200px;
+}
+
+#but1, #but3 {
+  background : #DBE6D9;
+}
+
+.centers {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin : 20px;
+}
+.center1 {
+  border-style : outset;
+  background-color: #DBE6D9;
+  width : 600px; height : 210px;
+  padding : 10px;
+  border-radius: 20px;
+}
+.center2 {
+  border-style :outset;
+  background-color: #DBE6D9;
+  width : 150px; height : 150px;
+  padding: 40px; 
+  border-radius: 20px;
+}
+
+.south {
+  border-style:unset;
+  background-color: #DBE6D9;
+  width : 450px; height : 100px;
+  padding: 60px 100px;
+  margin : 30px 250px;
+  border-radius: 20px;
+}
+.star-label {
+  display: inline-block;
+      width: 32px;
+      height: 32px;
+      background-image: url('blackstar.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      cursor: pointer;
+}
+/* 별 누르면 사실 옆에 체크박스 있음 */
+input[type="checkbox"] {
+      display: none;
+  }

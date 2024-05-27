@@ -1,0 +1,163 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>서구실 운동 페이지</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 내 스타일시트 파일 경로 -->
+    <link rel="stylesheet" href="/stylesheets/menu.css"> <!-- 메뉴 스타일시트 -->
+  </head>
+  <body>
+    <div class="north">
+      <div class="north-content">
+        <input id="but1" type="button" name="yes" value="전">
+        <input id="but2" type="button" name="tody" value="2024.05.23">
+        <input id="but3" type="button" name="tom" value="후">
+        <input type="date">
+      </div>
+    </div>
+
+    <div class="centers">
+      <div class="center1">
+        <table border="1"> <!--흠 여기는 자바로 코드 짜서 넣어야할듯?-->
+          <thead>
+            <tr>
+              <th>운동</th>
+              <th>01</th>
+              <th>02</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>트레드밀</td>
+              <td>7시 30분</td>
+            </tr>
+            <tr>
+              <td>필라테스</td>
+              <td>8시</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="center2">
+        <form>
+        운동 : <input type="text" name="exercise" size="4">
+        <select name="shour">
+          <option value="00h">00시</option>
+          <option value="01h">01시</option>
+          <option value="02h">02시</option>
+          <option value="03h">03시</option>
+          <option value="04h">04시</option>
+          <option value="05h">05시</option>
+          <option value="06h">06시</option>
+          <option value="07h">07시</option>
+          <option value="08h">08시</option>
+          <option value="09h">09시</option>
+          <option value="10h">10시</option>
+          <option value="11h">11시</option>
+          <option value="12h">12시</option>
+          <option value="13h">13시</option>
+          <option value="14h">14시</option>
+          <option value="15h">15시</option>
+          <option value="16h">16시</option>
+          <option value="17h">17시</option>
+          <option value="18h">18시</option>
+          <option value="19h">19시</option>
+          <option value="20h">20시</option>
+          <option value="21h">21시</option>
+          <option value="22h">22시</option>
+          <option value="23h">23시</option>
+        </select>      
+        <select name="sminute">
+          <option value="00m">00분</option>
+          <option value="10m">10분</option>
+          <option value="20m">20분</option>
+          <option value="30m">30분</option>
+          <option value="40m">40분</option>
+          <option value="50m">50분</option>
+        </select><br><br><br>
+        <select name="fhour">
+          <option value="00h">00시</option>
+          <option value="01h">01시</option>
+          <option value="02h">02시</option>
+          <option value="03h">03시</option>
+          <option value="04h">04시</option>
+          <option value="05h">05시</option>
+          <option value="06h">06시</option>
+          <option value="07h">07시</option>
+          <option value="08h">08시</option>
+          <option value="09h">09시</option>
+          <option value="10h">10시</option>
+          <option value="11h">11시</option>
+          <option value="12h">12시</option>
+          <option value="13h">13시</option>
+          <option value="14h">14시</option>
+          <option value="15h">15시</option>
+          <option value="16h">16시</option>
+          <option value="17h">17시</option>
+          <option value="18h">18시</option>
+          <option value="19h">19시</option>
+          <option value="20h">20시</option>
+          <option value="21h">21시</option>
+          <option value="22h">22시</option>
+          <option value="23h">23시</option>
+        </select>      
+        <select name="fminute">
+          <option value="00m">00분</option>
+          <option value="10m">10분</option>
+          <option value="20m">20분</option>
+          <option value="30m">30분</option>
+          <option value="40m">40분</option>
+          <option value="50m">50분</option>
+        </select><br><br>
+        <input type="submit">
+      </form>
+      </div>
+
+    </div>
+
+    <div class="south">
+      <table border="1">
+        <tr>
+          <th colspan="2">오늘의 운동 평가</th>
+        </tr>
+        <tr>
+          <td rowspan="2">
+            <input type="checkbox" name="star" id="star1">
+            <label for="star1" class="star-label"></label>
+            <input type="checkbox" name="star" id="star2">
+            <label for="star2" class="star-label"></label>
+            <input type="checkbox" name="star" id="star3">
+            <label for="star3" class="star-label"></label>
+            <input type="checkbox" name="star" id="star4">
+            <label for="star4" class="star-label"></label>
+            <input type="checkbox" name="star" id="star5">
+            <label for="star5" class="star-label"></label>
+          </td>
+          <td>
+            <input type="text" name="mess" value="히히">
+          </td>
+        </tr>
+      </table>
+
+      <script> 
+      // 별 클릭시 색깔 바꾸기
+        const starLabels = document.querySelectorAll('.star-label');
+        starLabels.forEach((label) => {
+          label.addEventListener('click', () => {
+            const checkbox = document.getElementById(label.htmlFor);
+            if (checkbox.checked) {
+              label.style.backgroundImage = "url('blackstar.png')";
+              checkbox.checked = false;
+            } else {
+              label.style.backgroundImage = "url('yellowstar.png')";
+              checkbox.checked = true;
+            }
+          });
+        });
+      </script>
+      
+    </div>
+  </body>
+</html>
